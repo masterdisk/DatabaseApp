@@ -1,5 +1,21 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <div class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title is-size-1">About Digital Marker</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p class="org-description is-size-4">Example 1</p>
+      <p class="org-description is-size-4">Example 2</p>
+    </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.org-description {
+  margin-top: 50px;
+}
+</style>
