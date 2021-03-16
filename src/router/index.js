@@ -27,6 +27,22 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Database.vue')
   },
   {
+    path: '/whitepapers',
+    name: 'WhitePapers',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/WhitePapers.vue')
+  },
+  {
+    path: '/resources',
+    name: 'Resources',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Resources.vue')
+  },
+  {
     path: '/contact',
     name: 'Contact',
     // route level code-splitting
@@ -34,14 +50,6 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
   },
-  {
-    path: '/whitepapers',
-    name: 'WhitePapers',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/WhitePapers.vue')
-  }
 ]
 
 const router = new VueRouter({
