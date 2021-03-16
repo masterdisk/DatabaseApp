@@ -14,16 +14,19 @@
         </div>
       </div>
     </section>
+    <EventList />
   </div>
 </template>
 
 <script>
-
-
+import EventList from '../components/EventList';
 export default {
   name: 'Home',
-  components: {}
+  components: {
+    EventList
+  }
 }
+
 </script>
 
 <style lang="scss" scoped>
