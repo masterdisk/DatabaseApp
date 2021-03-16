@@ -29,7 +29,8 @@ export default {
 <style lang="scss" scoped>
 .hero {
   text-align: center;
-  background-size: cover;
+  background-image: url("https://picsum.photos/200/300");
+  background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 400px;
