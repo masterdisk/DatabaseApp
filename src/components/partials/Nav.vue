@@ -2,7 +2,7 @@
   <nav aria-label="main navigation" class="navbar container" role="navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <strong class="is-size-4">Animal Rescue League</strong>
+        <strong class="is-size-4">Digital Marker Portal</strong>
       </a>
       <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample" role="button">
         <span aria-hidden="true"></span>
@@ -15,6 +15,7 @@
         <router-link class="navbar-item" to="/">Home</router-link>
         <router-link class="navbar-item" to="/about">About</router-link>
         <router-link class="navbar-item" to="/database">Database</router-link>
+        <router-link class="navbar-item" to="/Contact">Contact</router-link>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
