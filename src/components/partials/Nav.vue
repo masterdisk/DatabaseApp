@@ -15,7 +15,8 @@
         <router-link class="navbar-item" to="/">Home</router-link>
         <router-link class="navbar-item" to="/about">About</router-link>
         <router-link class="navbar-item" to="/database">Database</router-link>
-        <router-link class="navbar-item" to="/Contact">Contact</router-link>
+        <router-link class="navbar-item" to="/contact">Contact</router-link>
+        <router-link class="navbar-item" to="/whitepapers">White Papers</router-link>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
