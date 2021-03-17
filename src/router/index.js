@@ -1,61 +1,49 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 import Home from '../views/Home.vue'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
-    path: '/database',
-    name: 'Database',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Database.vue')
-  },
-  {
-    path: '/whitepapers',
-    name: 'WhitePapers',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/WhitePapers.vue')
-  },
-  {
-    path: '/resources',
-    name: 'Resources',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Resources.vue')
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
-  },
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+export default new Router({
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes: [
+        {
+            path: '/',
+            name: 'Home',
+            component: Home
+        },
+        {
+            path: '/about',
+            name: 'About',
+            component: () => import('../views/About.vue')
+        },
+        {
+            path: '/database',
+            name: 'Database',
+            component: () => import('../views/Database.vue')
+        },
+        {
+            path: '/whitepapers',
+            name: 'WhitePapers',
+            component: () => import('../views/WhitePapers.vue')
+        },
+        {
+            path: '/resources',
+            name: 'Resources',
+            component: () => import('../views/Resources.vue')
+        },
+        {
+            path: '/contact',
+            name: 'Contact',
+            component: () => import('../views/Contact.vue')
+        },
+        {
+            path: '/whitepapers/:id',
+            name: 'eventSingle',
+            component: () => import('../views/EventSingle.vue')
+        }
+    ]
 })
 
-export default router
+

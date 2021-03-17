@@ -7,12 +7,21 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <p class="org-description is-size-4">Example 1</p>
-      <p class="org-description is-size-4">Example 2</p>
-    </div>
+
+    <EventList />
   </div>
 </template>
+
+<script>
+import EventList from '../components/EventList';
+export default {
+  name: 'Home',
+  components: {
+    EventList
+  }
+}
+
+</script>
 
 <style lang="scss" scoped>
 .org-description {

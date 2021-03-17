@@ -2,17 +2,22 @@
   <div class="event-card">
     <div class="card">
       <div class="card-content">
-        <h2 class="is-size-4 has-text-weight-bold">Event name</h2>
-        <small class="event-date">Event date</small>
-        <span>Event location</span>
+        <h2 class="is-size-4 has-text-weight-bold">{{ event.name }}</h2>
+        <small class="event-date">{{ event.date }}</small>
+        <span>{{ event.location }}</span>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
+  props: [
+    'event'
+  ]
 }
 </script>
+
 <style lang="scss" scoped>
 .card {
   background-image: url('https://placekitten.com/400/400');
@@ -21,6 +26,7 @@ export default {
   background-size: cover;
   text-align: center;
 }
+
 .card-content {
   position: absolute;
   color: #FFF;
@@ -29,6 +35,7 @@ export default {
   padding: 10px;
   height: 200px;
   width: 100%;
+
   span {
     font-size: 18px;
     text-align: center;
@@ -37,10 +44,12 @@ export default {
     bottom: 10px;
     right: 0;
   }
+
   h2 {
     margin-top: 10px;
   }
 }
+
 .event-date {
   background-color: #151515;
   color: #FFF;

@@ -8,7 +8,7 @@
           <h2 class="subtitle">Digital Marker Database</h2>
 
           <div class="button-block">
-            <button class="button is-xl is-dark">Access the main dashboard</button>
+            <button class="button is-xl is-dark" to="../contact">Access the main dashboard</button>
           </div>
 
         </div>
