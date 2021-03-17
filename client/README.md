@@ -1,4 +1,4 @@
-# dbapp
+# db-app-client
 
 ## Project setup
 ```
