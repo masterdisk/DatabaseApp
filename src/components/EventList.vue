@@ -27,9 +27,9 @@ export default {
       events: [
         {
           id: 1,
-          name: 'Charity Ball',
-          category: 'Fundraising',
-          description: 'Spend an elegant night of dinner and dancing with us as we raise money for our new rescue farm.',
+          name: '10Branch',
+          category: 'Portland, Oregon, United States',
+          description: '10Branch, LLC combines capital with an operationally proven approach to help companies find deliberate growth.',
           featuredImage: 'https://placekitten.com/500/500',
           images: [
             'https://placekitten.com/500/500',
@@ -42,16 +42,48 @@ export default {
         },
         {
           id: 2,
-          name: 'Rescue Center Goods Drive',
-          category: 'Adoptions',
-          description: 'Come to our donation drive to help us replenish our stock of pet food, toys, bedding, etc. We will have live bands, games, food trucks, and much more.',
+          name: '20K Industries',
+          category: 'Vienna, Virginia, United States',
+          description: '20K Industries, LLC is a closely held family office based in Washington, D.C.',
           featuredImage: 'https://placekitten.com/500/500',
           images: [
-            'https://placekitten.com/500/500'
+            'https://placekitten.com/500/500',
+            'https://placekitten.com/500/500',
+            'https://placekitten.com/500/500',
           ],
-          location: '1234 Dog Alley',
-          date: '11-21-2019',
-          time: '12:00'
+          location: '1234 Fancy Ave',
+          date: '12-25-2019',
+          time: '11:30'
+        },
+        {
+          id: 3,
+          name: '2M Companies',
+          category: 'Dallas, Texas, United States',
+          description: 'Their investment operations are conducted through 2M Companies, Inc. At first glance they appear to be similar to many other investment',
+          featuredImage: 'https://placekitten.com/500/500',
+          images: [
+            'https://placekitten.com/500/500',
+            'https://placekitten.com/500/500',
+            'https://placekitten.com/500/500',
+          ],
+          location: '1234 Fancy Ave',
+          date: '12-25-2019',
+          time: '11:30'
+        },
+        {
+          id: 4,
+          name: 'Acquis Capital, LLC',
+          category: 'Boston, Massachusetts, United States',
+          description: 'Acquis Capital is a private investment firm that specializes in acquisitions.',
+          featuredImage: 'https://placekitten.com/500/500',
+          images: [
+            'https://placekitten.com/500/500',
+            'https://placekitten.com/500/500',
+            'https://placekitten.com/500/500',
+          ],
+          location: '1234 Fancy Ave',
+          date: '12-25-2019',
+          time: '11:30'
         }
       ]
     }
