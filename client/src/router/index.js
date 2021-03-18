@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
+import {authGuard} from "../auth/authGuard";
 
 Vue.use(Router)
 
@@ -10,40 +11,19 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'Home',
+            name: 'home',
             component: Home
         },
         {
             path: '/about',
-            name: 'About',
+            name: 'about',
             component: () => import('../views/About.vue')
         },
         {
-            path: '/database',
-            name: 'Database',
-            component: () => import('../views/Database.vue')
-        },
-        {
-            path: '/whitepapers',
-            name: 'WhitePapers',
-            component: () => import('../views/WhitePapers.vue')
-        },
-        {
-            path: '/resources',
-            name: 'Resources',
-            component: () => import('../views/Resources.vue')
-        },
-        {
-            path: '/contact',
-            name: 'Contact',
-            component: () => import('../views/Contact.vue')
-        },
-        {
-            path: '/whitepapers/:id',
+            path: '/event/:id',
             name: 'eventSingle',
-            component: () => import('../views/EventSingle.vue')
+            component: () => import('../views/EventSingle.vue'),
+            beforeEnter: authGuard
         }
     ]
 })
-
-

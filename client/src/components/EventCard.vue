@@ -9,18 +9,14 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
-  props: [
-    'event'
-  ]
-}
+  props: ["event"]
+};
 </script>
-
 <style lang="scss" scoped>
 .card {
-  background-image: url('https://placekitten.com/400/400');
+  background-image: url("https://placekitten.com/400/400");
   height: 200px;
   background-position: center;
   background-size: cover;
@@ -28,8 +24,9 @@ export default {
 }
 
 .card-content {
+  padding-top: 50px;
   position: absolute;
-  color: #FFF;
+  color: #fff;
   background-color: rgba(0, 0, 0, 0.35);
   top: 0;
   padding: 10px;
@@ -52,8 +49,8 @@ export default {
 
 .event-date {
   background-color: #151515;
-  color: #FFF;
-  font-size: .75em;
+  color: #fff;
+  font-size: 0.75em;
   padding: 2px 10px;
   position: absolute;
   top: 0;
