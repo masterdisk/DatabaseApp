@@ -19,7 +19,7 @@
         </div>
       </div>
     </section>
-    <EventsList/>
+    <EventsList  v-if="$auth.isAuthenticated"/>
   </div>
 </template>
 <script>
