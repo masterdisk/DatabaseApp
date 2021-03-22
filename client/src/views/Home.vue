@@ -3,32 +3,47 @@
     <section class="hero is-dark">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title">
-            Welcome to Digital Marker
-          </h1>
-          <h2 class="subtitle">
-            Make sure you check out your data
-          </h2>
-          <div class="button-block">
-            <button v-if="!$auth.isAuthenticated" class="button is-xl is-dark" @click="login">Sign Up to Browse Events
-            </button>
-            <h3 v-if="$auth.isAuthenticated" class="is-size-3 has-background-dark welcome">Welcome, {{
-                $auth.user.name
-              }}!</h3>
+          <div class="columns">
+
+            <div class="third">
+
+              <h2 class="subtitle has-text-left">
+                Digital Marker is the first <br> platform for sustainable retail, fashion, beauty <br> & welness SMVs.
+              </h2>
+
+              <div class="button-block ">
+
+                <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse
+                  Events
+                </button>
+
+                <h3 v-if="$auth.isAuthenticated" class="is-size-6 has-background-dark welcome">Welcome, {{
+                    $auth.user.name
+                  }}!</h3>
+              </div>
+            </div>
+
+            <div class="third"></div>
+            <div class="third"></div>
           </div>
+
         </div>
       </div>
     </section>
-    <EventsList  v-if="$auth.isAuthenticated"/>
+
+    <CallToAction/>
   </div>
 </template>
 <script>
-import EventsList from '../components/EventsList';
+
+<script type="text/javascript" type="module" src="/static/js/stripe-block.js"></script>
+
+import CallToAction from "@/components/CallToAction";
 
 export default {
   name: 'home',
   components: {
-    EventsList
+    CallToAction
   },
   methods: {
     // Log the user in
@@ -57,6 +72,7 @@ export default {
 .subtitle {
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
   font-size: 30px;
+  margin-bottom: 0px !important;
 }
 
 .button-block {
@@ -74,14 +90,20 @@ export default {
   }
 
   .welcome {
-    width: 400px;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-overflow: ellipsis;
+  white-space: nowrap;
+    overflow: hidden;
   }
 }
 
 .is-xl {
   font-size: 1.7rem;
+}
+
+.third {
+  width: 33.33333%;
 }
 </style>

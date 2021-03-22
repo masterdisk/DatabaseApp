@@ -25,6 +25,8 @@
               <a v-if="!$auth.isAuthenticated" class="button is-dark" @click="login"><strong>Sign in</strong></a>
               <!-- show logout when authenticated -->
               <a v-if="$auth.isAuthenticated" class="button is-dark" @click="logout"><strong>Log out</strong></a>
+              <!-- show logout when authenticated -->
+              <a v-if="$auth.isAuthenticated" class="button is-dark" @click="logout"><strong>Purchase</strong></a>
             </div>
           </div>
         </div>
