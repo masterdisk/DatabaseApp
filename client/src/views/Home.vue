@@ -36,7 +36,6 @@
 </template>
 <script>
 
-<script type="text/javascript" type="module" src="/static/js/stripe-block.js"></script>
 
 import CallToAction from "@/components/CallToAction";
 
