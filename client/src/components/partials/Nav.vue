@@ -1,3 +1,4 @@
+<!-- NavBar code -->
 <template>
   <nav aria-label="main navigation" class="navbar container" role="navigation">
     <div class="navbar-brand">
@@ -25,7 +26,7 @@
               <a v-if="!$auth.isAuthenticated" class="button is-dark" @click="login"><strong>Sign in</strong></a>
               <!-- show logout when authenticated -->
               <a v-if="$auth.isAuthenticated" class="button is-dark" @click="logout"><strong>Log out</strong></a>
-              <!-- show logout when authenticated -->
+              <!-- show purchase when authenticated -->
               <a v-if="$auth.isAuthenticated" class="button is-dark" @click="logout"><strong>Purchase</strong></a>
             </div>
           </div>

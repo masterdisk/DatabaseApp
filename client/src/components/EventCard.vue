@@ -1,3 +1,4 @@
+<!-- EventCard re-usable component  -->
 <template>
   <div class="event-card">
     <div class="card">

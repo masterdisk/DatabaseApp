@@ -93,7 +93,7 @@ export default {
     padding-top: 10px;
     padding-bottom: 10px;
     text-overflow: ellipsis;
-  white-space: nowrap;
+    white-space: nowrap;
     overflow: hidden;
   }
 }

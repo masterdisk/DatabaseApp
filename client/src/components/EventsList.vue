@@ -1,3 +1,4 @@
+<!-- EventList re-usable component(row of EventSingle) -->
 <template>
   <div class="events container">
     <h2 class="subtitle is-3">Check out our upcoming events</h2>
