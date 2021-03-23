@@ -13,11 +13,12 @@
 
               <div class="button-block ">
 
-                <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events</button>
+                <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events
+                </button>
 
-                <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console" >Welcome, {{ $auth.user.name }}!</a>
-
+                <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console">Welcome, {{ $auth.user.name }}!</a>
               </div>
+
             </div>
 
             <div class="third"></div>
@@ -27,26 +28,28 @@
         </div>
       </div>
     </section>
-
     <CallToAction/>
+    <EventList/>
   </div>
 </template>
 <script>
 
 
 import CallToAction from "@/components/CallToAction";
+import EventList from "@/components/EventsList";
 
 export default {
   name: 'home',
   components: {
-    CallToAction
+    CallToAction,
+    EventList
   },
   methods: {
     // Log the user in
     login() {
       this.$auth.loginWithRedirect();
     },
-    console(){
+    console() {
       console.log("click click..")
     }
   }

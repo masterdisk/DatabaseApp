@@ -20,6 +20,11 @@ export default new Router({
             component: () => import('../views/Contact.vue')
         },
         {
+            path: '/store',
+            name: 'store',
+            component: () => import('../views/Store.vue')
+        },
+        {
             path: '/event/:id',
             name: 'eventSingle',
             component: () => import('../views/EventSingle.vue'),
