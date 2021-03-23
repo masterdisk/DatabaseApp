@@ -6,6 +6,8 @@ const app = express();
 const port = 8000;
 const jwt = require("express-jwt");
 const jwksRsa = require("jwks-rsa");
+// stripe support
+
 
 app.use(bodyParser.json());
 app.use(cors());

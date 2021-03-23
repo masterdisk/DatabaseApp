@@ -13,10 +13,10 @@
 
               <div class="button-block ">
 
-                <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events
-                </button>
+                <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events </button>
 
                 <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console">Welcome, {{ $auth.user.name }}!</a>
+
               </div>
 
             </div>
