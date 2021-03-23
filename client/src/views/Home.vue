@@ -13,13 +13,10 @@
 
               <div class="button-block ">
 
-                <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse
-                  Events
-                </button>
+                <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events</button>
 
-                <h3 v-if="$auth.isAuthenticated" class="is-size-6 has-background-dark welcome">Welcome, {{
-                    $auth.user.name
-                  }}!</h3>
+                <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console" >Welcome, {{ $auth.user.name }}!</a>
+
               </div>
             </div>
 
@@ -48,6 +45,9 @@ export default {
     // Log the user in
     login() {
       this.$auth.loginWithRedirect();
+    },
+    console(){
+      console.log("click click..")
     }
   }
 }

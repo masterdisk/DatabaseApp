@@ -10,11 +10,13 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   props: ["event"]
 };
 </script>
+
 <style lang="scss" scoped>
 .card {
   background-image: url("https://placekitten.com/400/400");
