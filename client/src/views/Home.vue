@@ -16,7 +16,7 @@
                 <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events </button>
 
                 <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console">Welcome, {{ $auth.user.name }}!</a>
-
+<PayButton/>
               </div>
 
             </div>
@@ -37,12 +37,14 @@
 
 import CallToAction from "@/components/CallToAction";
 import EventList from "@/components/EventsList";
+import PayButton from "@/components/partials/PayButton";
 
 export default {
   name: 'home',
   components: {
     CallToAction,
-    EventList
+    EventList,
+    PayButton
   },
   methods: {
     // Log the user in
