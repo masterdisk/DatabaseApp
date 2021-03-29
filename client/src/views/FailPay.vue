@@ -3,7 +3,7 @@
     <div class="hero is-primary">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title is-size-1">About Digital Marker</h1>
+          <h1 class="title is-size-1">Failed payment</h1>
         </div>
       </div>
     </div>

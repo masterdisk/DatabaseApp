@@ -1,9 +1,9 @@
 <!-- NavBar code -->
 <template>
-  <nav aria-label="main navigation" class="navbar container" role="navigation">
+  <nav aria-label="main navigation" class="navbar container is-transparent" role="navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <strong class="is-size-4">Digital Marker Database</strong>
+        <img src="../../../public/images/logo.jpg" alt="logo">
       </a>
       <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample"
          role="button">
