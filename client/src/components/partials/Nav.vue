@@ -1,42 +1,46 @@
 <!-- NavBar code -->
 <template>
-  <nav aria-label="main navigation" class="navbar container is-transparent" role="navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="../../../public/images/logo.jpg" alt="logo">
-      </a>
-      <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample"
-         role="button">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-    <div id="navbar" class="navbar-menu">
-      <div class="navbar-start">
-        <router-link class="navbar-item" to="/">Home</router-link>
-        <router-link class="navbar-item" to="/contact">Contact</router-link>
-        <router-link class="navbar-item" to="/store">Store</router-link>
+  <div class="background-nav">
+    <nav aria-label="main navigation" class="navbar container" role="navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item logo" href="/">
+          <img alt="logo" src="../../../public/images/logo.png">
+        </a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample"
+           role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <!-- Check that the SDK client is not currently loading before accessing is methods -->
-            <div v-if="!$auth.loading">
-              <!-- show login when not authenticated -->
-              <a v-if="!$auth.isAuthenticated" class="button is-dark" @click="login"><strong>Sign in</strong></a>
-              <!-- show logout when authenticated -->
-              <a v-if="$auth.isAuthenticated" class="button is-dark" @click="logout"><strong>Log out</strong></a>
-              <!-- show purchase when authenticated -->
-              <a v-if="$auth.isAuthenticated" class="button is-dark" @click="logout"><strong>Purchase</strong></a>
+      <div id="navbar" class="navbar-menu">
+        <div class="navbar-start">
+          <router-link class="navbar-item" to="/financing">Financing</router-link>
+          <router-link class="navbar-item" to="/funding">Funding</router-link>
+          <router-link class="navbar-item" to="/entrepreneurship">Entrepreneurship</router-link>
+          <router-link class="navbar-item" to="/contact">Contact</router-link>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <!-- Check that the SDK client is not currently loading before accessing is methods -->
+              <div v-if="!$auth.loading">
+                <!-- show login when not authenticated -->
+                <a v-if="!$auth.isAuthenticated" class="button " @click="login"><strong>Sign in</strong></a>
+                <!-- show logout when authenticated -->
+                <a v-if="$auth.isAuthenticated" class="button" @click="logout"><strong>Log out</strong></a>
+                <!-- show purchase when authenticated -->
+                <a v-if="$auth.isAuthenticated" class="button " @click="logout"><strong>Purchase</strong></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </template>
 <script>
+
 export default {
   name: 'Nav',
   methods: {
@@ -54,17 +58,68 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-nav {
-  margin-top: 25px;
-  margin-bottom: 30px;
+.background-nav {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  right: 0px;
 
-  a {
+  nav {
+    background-color: transparent;
+    position: relative;
+  }
+
+  .logo {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+    img {
+      width: 108px;
+      height: 108px;
+      max-height: none;
+    }
+  }
+
+  .navbar-item {
+    font-family: "Lato-Bold", "Lato-Bold", Helvetica, Arial;
+    font-size: 32.5px;
     font-weight: bold;
-    color: #2c3e50;
+    -webkit-text-stroke: 2px black;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: white;
+
+    &:hover {
+      color: red;
+      background-color: transparent;
+    }
 
     &.router-link-exact-active {
-      color: #d88d00;
+      color: blue;
+      background-color: transparent;
+    }
+    .buttons {
+      &:first-child{
+        padding-left: 48px;
+      }
+      .button {
+        background-color: transparent;
+        border-color: transparent;
+        font-family: "Lato-Bold", "Lato-Bold", Helvetica, Arial;
+        font-size: 32.5px;
+        font-weight: bold;
+        -webkit-text-stroke: 2px black;
+        color: white;
+        &:hover {
+          color: red;
+          background-color: transparent;
+        }
+      }
     }
   }
 }
+
 </style>

@@ -60,11 +60,11 @@ export default {
 <style lang="scss" scoped>
 .hero {
   text-align: center;
-  background-image: url('https://cdn.auth0.com/blog/vue-meetup/event-banner.png');
+  background-image: url('../../public/images/landingspage/header/header.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 857px;
 }
 
 .hero-body .title {
@@ -75,8 +75,9 @@ export default {
 
 .subtitle {
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
-  font-size: 30px;
+  font-size: 73px;
   margin-bottom: 0px !important;
+  width: 885px;
 }
 
 .button-block {
