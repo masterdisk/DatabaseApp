@@ -3,28 +3,32 @@
     <section class="hero is-dark">
       <div class="hero-body">
         <div class="container">
-          <div class="columns">
+          <div id="box">
+            <div class="columns header">
 
-            <div class="third">
+              <div class="third">
 
-              <h2 class="subtitle has-text-left">
-                Digital Marker is the first <br> platform for sustainable retail, fashion, beauty <br> & welness SMVs.
-              </h2>
+                <h2 class="has-text-left">
+                  Digital Marker is the first <br> platform for sustainable retail, fashion, beauty <br> & welness SMVs.
+                </h2>
 
-              <div class="button-block ">
+                <div class="button-block ">
 
-                <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events </button>
+                  <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events
+                  </button>
 
-                <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console">Welcome, {{ $auth.user.name }}!</a>
-<PayButton/>
+                  <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console">Welcome, {{
+                      $auth.user.name
+                    }}!</a>
+                  <PayButton/>
+                </div>
+
               </div>
 
+              <div class="third"></div>
+              <div class="third"></div>
             </div>
-
-            <div class="third"></div>
-            <div class="third"></div>
           </div>
-
         </div>
       </div>
     </section>
@@ -57,7 +61,9 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
+
 .hero {
   text-align: center;
   background-image: url('../../public/images/landingspage/header/header.png');
@@ -67,41 +73,56 @@ export default {
   height: 857px;
 }
 
-.hero-body .title {
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
-  padding: 40px 0 20px 0;
-  font-size: 60px;
+.hero-body {
+  background-color: royalblue;
+  opacity: 0.82;
+  clip-path: polygon(0 0, 70% 0%, 40% 91.5%, 0% 91.5%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
-.subtitle {
-  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
-  font-size: 73px;
-  margin-bottom: 0px !important;
-  width: 885px;
+
+.header {
+  margin-top: 6rem;
+
+  h2 {
+    font-family: "Lato", Helvetica, Arial;
+    font-weight: 400;
+    font-size: 72.3px;
+    width: 885px;
+    color: white;
+    opacity: 100%;
+  }
 }
+
 
 .button-block {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+
   position: absolute;
   bottom: -150px;
 
-  .button {
-    margin-right: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+  .button.is-dark {
+    &:first-child {
+      font-family: "Lato", Helvetica, Arial;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 45px;
+      margin-top: 24px;
+    }
   }
 
-  .welcome {
-    width: 250px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
+  //stay here to modify the second button
+  .paybutton {
+    .button {
+      font-family: "Lato", Helvetica, Arial;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 45px;
+      margin-top: 24px;
+    }
   }
+
 }
 
 .is-xl {

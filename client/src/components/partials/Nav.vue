@@ -71,10 +71,12 @@ export default {
   position: absolute;
   left: 0px;
   right: 0px;
+  z-index: 20;
 
   nav {
     background-color: transparent;
     position: relative;
+    z-index: 20;
   }
 
   .logo {
