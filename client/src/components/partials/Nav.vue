@@ -6,14 +6,13 @@
         <a class="navbar-item logo" href="/">
           <img alt="logo" src="../../../public/images/logo.png">
         </a>
-        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample"
-           role="button">
+        <a role="button" class="navbar-burger " aria-label="menu" aria-expanded="false" @click="isOpen = !isOpen" v-bind:class="{'is-active': isOpen}">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <div id="navbar" class="navbar-menu">
+      <div id="navbar" class="navbar-menu" v-bind:class="{'is-active background-nav': isOpen}">
         <div class="navbar-start">
           <router-link class="navbar-item" to="/financing">Financing</router-link>
           <router-link class="navbar-item" to="/funding">Funding</router-link>
@@ -54,9 +53,17 @@ export default {
         returnTo: window.location.origin
       });
     }
+  },
+  data: function() {
+    return {
+      isOpen: false
+    }
   }
 }
+
+
 </script>
+
 <style lang="scss" scoped>
 .background-nav {
   background-color: rgba(0, 0, 0, 0.4);
