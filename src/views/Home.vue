@@ -92,7 +92,6 @@ export default {
     font-size: 72.3px;
     width: 885px;
     color: white;
-    opacity: 100%;
   }
 }
 
