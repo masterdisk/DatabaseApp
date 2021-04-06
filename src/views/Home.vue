@@ -74,14 +74,15 @@ export default {
 }
 
 .hero-body {
-  background-color: royalblue;
-  opacity: 0.82;
+  background-color: #254b8e;
   clip-path: polygon(0 0, 70% 0%, 40% 91.5%, 0% 91.5%);
   width: 100%;
   height: 100%;
   position: absolute;
+  opacity: 0.82;
 }
 
+//here for transparency effect header and responsiveness
 
 .header {
   margin-top: 6rem;
@@ -111,16 +112,6 @@ export default {
     }
   }
 
-  //stay here to modify the second button
-  .paybutton {
-    .button {
-      font-family: "Lato", Helvetica, Arial;
-      font-weight: 400;
-      font-style: italic;
-      font-size: 45px;
-      margin-top: 24px;
-    }
-  }
 
 }
 

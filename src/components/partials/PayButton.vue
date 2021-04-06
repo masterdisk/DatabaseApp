@@ -2,11 +2,11 @@
   <div class="paybutton">
     <stripe-checkout
         ref="checkoutRef"
-        mode="payment"
-        :pk="publishableKey"
-        :line-items="lineItems"
-        :success-url="successURL"
         :cancel-url="cancelURL"
+        :line-items="lineItems"
+        :pk="publishableKey"
+        :success-url="successURL"
+        mode="payment"
         @loading="v => loading = v"
     />
     <button class="button  is-dark" @click="submit">Pay now!</button>
@@ -14,12 +14,13 @@
 </template>
 
 <script>
-import { StripeCheckout } from '@vue-stripe/vue-stripe';
+import {StripeCheckout} from '@vue-stripe/vue-stripe';
+
 export default {
   components: {
     StripeCheckout,
   },
-  data () {
+  data() {
     this.publishableKey = 'pk_test_ooAw4OQqFiFEZRSnMKhtXbZB'; //modify this with the API key - public one for testing
     return {
       loading: false,
@@ -34,10 +35,27 @@ export default {
     };
   },
   methods: {
-    submit () {
+    submit() {
       // You will be redirected to Stripe's secure checkout page
       this.$refs.checkoutRef.redirectToCheckout();
     },
   },
 };
 </script>
+
+<style lang="scss" scoped>
+
+
+.paybutton {
+  text-align: left;
+  .button {
+    font-family: "Lato", Helvetica, Arial;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 45px;
+    margin-top: 24px;
+  }
+}
+
+
+</style>
