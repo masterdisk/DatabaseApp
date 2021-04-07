@@ -23,6 +23,21 @@ Vue.use(Auth0Plugin, {
     }
 });
 
+//import FontAwesome
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+    faTwitter,
+    faFacebook,
+    faStackOverflow,
+    faGithub
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+library.add(faStar, faTwitter, faFacebook, faStackOverflow, faGithub);
+Vue.component("font-awesome-icon", FontAwesomeIcon);
+
 Vue.config.productionTip = false
 
 new Vue({
