@@ -1,5 +1,5 @@
 <template>
-  <div class="paybutton">
+  <div  v-if="$auth.isAuthenticated" class="paybutton">
     <stripe-checkout
         ref="checkoutRef"
         :cancel-url="cancelURL"
@@ -48,12 +48,14 @@ export default {
 
 .paybutton {
   text-align: left;
+
   .button {
     font-family: "Lato", Helvetica, Arial;
     font-weight: 400;
     font-style: italic;
     font-size: 45px;
     margin-top: 24px;
+    background-color: #283655;
   }
 }
 

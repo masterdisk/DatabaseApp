@@ -14,7 +14,7 @@
 
                 <div class="button-block ">
 
-                  <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Sign Up to Browse Events
+                  <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Register for 50 DKK
                   </button>
 
                   <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console">Welcome, {{
@@ -22,15 +22,16 @@
                     }}!</a>
                   <PayButton/>
                 </div>
-
               </div>
-
               <div class="third"></div>
               <div class="third"></div>
             </div>
           </div>
         </div>
+
+
       </div>
+      <div class="background-header"></div>
     </section>
     <CallToAction/>
     <EventList/>
@@ -74,12 +75,7 @@ export default {
 }
 
 .hero-body {
-  background-color: #254b8e;
-  clip-path: polygon(0 0, 70% 0%, 40% 91.5%, 0% 91.5%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0.82;
+  z-index: 10;
 }
 
 //here for transparency effect header and responsiveness
@@ -88,7 +84,7 @@ export default {
   margin-top: 6rem;
 
   h2 {
-    font-family: "Lato", Helvetica, Arial;
+    font-family: "Lato-Regular", Helvetica, Arial;
     font-weight: 400;
     font-size: 72.3px;
     width: 885px;
@@ -103,6 +99,8 @@ export default {
   bottom: -150px;
 
   .button.is-dark {
+    background-color: #283655;
+
     &:first-child {
       font-family: "Lato", Helvetica, Arial;
       font-weight: 400;
@@ -113,6 +111,17 @@ export default {
   }
 
 
+}
+
+.background-header {
+  position: absolute;
+  background-color: #254b8e;
+  clip-path: polygon(0 0, 70% 0%, 40% 91.5%, 0% 91.5%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.82;
+  z-index: 0;
 }
 
 .is-xl {
