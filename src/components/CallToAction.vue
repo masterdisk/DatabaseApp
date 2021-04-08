@@ -7,10 +7,9 @@
         <div class="tile is-parent">
           <article class="tile is-child ">
             <figure class="image is-profile ">
-              <img class="is-round" src="https://via.placeholder.com/150/FFFF00/000000%20?Text=Digital.com">
+              <img class="is-round" src="../../public/images/landingspage/cta/portrait.webp">
             </figure>
             <div class="is-inline rating">
-              <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
@@ -25,10 +24,9 @@
         <div class="tile is-parent">
           <article class="tile is-child ">
             <figure class="image is-profile ">
-              <img class="is-round" src="https://via.placeholder.com/150/FFFF00/000000%20?Text=Digital.com">
+              <img class="is-round" src="../../public/images/landingspage/cta/portrait.webp">
             </figure>
             <div class="is-inline rating">
-              <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
@@ -43,10 +41,9 @@
         <div class="tile is-parent">
           <article class="tile is-child ">
             <figure class="image is-profile ">
-              <img class="is-round" src="https://via.placeholder.com/150/FFFF00/000000%20?Text=Digital.com">
+              <img class="is-round" src="../../public/images/landingspage/cta/portrait.webp">
             </figure>
             <div class="is-inline rating">
-              <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
@@ -64,8 +61,10 @@
 </template>
 
 <script>
+
+
 export default {
-  name: "CallToAction"
+  name: "CallToAction",
 }
 </script>
 
@@ -75,36 +74,50 @@ export default {
   background-image: url('../../public/images/landingspage/cta/cta.png');
 }
 
-.is-profile {
-  width: 50%;
-  margin-left: 25%;
-  padding-bottom: 24px;
-}
 
 .title {
-  font-family: "Lato-BlackItalic", Helvetica, Arial;
-
+  font-family: "Lato-Heavy", Helvetica, Arial, serif;
   font-size: 24.25px;
   margin-top: 24px;
   color: white;
+  text-align: center;
 }
 
 .subtitle {
-  font-family: "Lato-Regular", Helvetica, Arial;
+  font-family: "Lato-Regular", Helvetica, Arial, serif;
   font-size: 24.25px;
   margin-top: 24px;
   color: white;
+  text-align: center;
 }
 
-.is-round {
-  border-radius: 50%;
+.is-profile {
+  padding-bottom: 24px;
+  .is-round {
+    width: 200px;
+    height: 200px;
+    border: double 4px transparent;
+    margin-left: 25%;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f9dca0, #f9dca0);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+  }
 }
 
 .rating {
   text-align: center;
-  color: #FFD700;
-  padding-left: 35%;
-  padding-right: 35%;
+  color: #f3ac3c;
+  stroke: red;
+  padding-left: 25%;
+  padding-right: 25%;
+
+  svg {
+    width: 30px;
+    filter: drop-shadow(1px 1px 0px #f9dca0) drop-shadow(-1px 1px 0px #f9dca0) drop-shadow(1px -1px 0px #f9dca0) drop-shadow(-1px -1px 0px #f9dca0);
+margin: 6px;
+  }
 }
 
 </style>
