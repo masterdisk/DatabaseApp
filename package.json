@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "concurrently \"nodemon index.js\" \"cd client && npm run serve\""
+    "start": "concurrently \"npm run serve\" \" && npm start\""
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.3.2",
