@@ -32,6 +32,7 @@
       <div class="background-header"></div>
     </section>
     <CallToAction/>
+    <Projects/>
     <EventList/>
   </div>
 </template>
@@ -39,12 +40,15 @@
 import CallToAction from "@/components/CallToAction";
 import EventList from "@/components/EventsList";
 import PayButton from "@/components/partials/PayButton";
+import Projects from "@/components/Projects";
+
 export default {
   name: 'home',
   components: {
     CallToAction,
     EventList,
-    PayButton
+    PayButton,
+    Projects
   },
   methods: {
     // Log the user in
@@ -52,7 +56,7 @@ export default {
       this.$auth.loginWithRedirect();
     },
     console() {
-      console.log("click click..")
+      // console.log("click click..")
     }
   }
 }
