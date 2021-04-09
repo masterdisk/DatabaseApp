@@ -5,11 +5,11 @@
       <div class="columns">
 
         <div class="tile is-parent">
-          <article class="tile is-child ">
-            <figure class="image is-profile ">
-              <img class="is-round" src="../../public/images/landingspage/cta/portrait.webp">
+          <article class="tile is-child">
+            <figure class=" is-profile ">
+              <img class="is-round" src="../../public/images/landingspage/cta/portrait1.webp">
             </figure>
-            <div class="is-inline rating">
+            <div class=" rating">
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
@@ -22,11 +22,11 @@
         </div>
 
         <div class="tile is-parent">
-          <article class="tile is-child ">
-            <figure class="image is-profile ">
-              <img class="is-round" src="../../public/images/landingspage/cta/portrait.webp">
+          <article class="tile is-child">
+            <figure class=" is-profile ">
+              <img class="is-round" src="../../public/images/landingspage/cta/portrait2.webp">
             </figure>
-            <div class="is-inline rating">
+            <div class=" rating">
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
@@ -39,11 +39,11 @@
         </div>
 
         <div class="tile is-parent">
-          <article class="tile is-child ">
-            <figure class="image is-profile ">
-              <img class="is-round" src="../../public/images/landingspage/cta/portrait.webp">
+          <article class="tile is-child">
+            <figure class=" is-profile ">
+              <img class="is-round" src="../../public/images/landingspage/cta/portrait3.webp">
             </figure>
-            <div class="is-inline rating">
+            <div class=" rating">
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
               <font-awesome-icon class="icon alt" icon="star"/>
@@ -76,15 +76,19 @@ export default {
 
 
 .title {
-  font-family: "Lato-Heavy", Helvetica, Arial, serif;
+  font-family: "Lato-Regular", Helvetica, Arial;
+  font-weight: normal;
   font-size: 24.25px;
   margin-top: 24px;
   color: white;
   text-align: center;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .subtitle {
-  font-family: "Lato-Regular", Helvetica, Arial, serif;
+  font-family: "Lato-Regular", Helvetica, Arial;
+  font-weight: bold;
   font-size: 24.25px;
   margin-top: 24px;
   color: white;
@@ -93,11 +97,13 @@ export default {
 
 .is-profile {
   padding-bottom: 24px;
+  text-align: center;
+
   .is-round {
     width: 200px;
     height: 200px;
     border: double 4px transparent;
-    margin-left: 25%;
+
     border-radius: 50%;
     background-image: linear-gradient(white, white), radial-gradient(circle at top left, #f9dca0, #f9dca0);
     background-origin: border-box;
@@ -110,14 +116,14 @@ export default {
   text-align: center;
   color: #f3ac3c;
   stroke: red;
-  padding-left: 25%;
-  padding-right: 25%;
+
 
   svg {
     width: 30px;
     filter: drop-shadow(1px 1px 0px #f9dca0) drop-shadow(-1px 1px 0px #f9dca0) drop-shadow(1px -1px 0px #f9dca0) drop-shadow(-1px -1px 0px #f9dca0);
-margin: 6px;
+    margin: 6px;
   }
 }
 
+.box{background-color: #254b8e}
 </style>
