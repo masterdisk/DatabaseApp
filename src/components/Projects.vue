@@ -13,19 +13,23 @@
           <p>Digital marker offers a fully stocked database for finance and enterprising that will be thrice as useful
             as any article, This is statisticaly proven.</p></div>
         <div class="is-image">
-          <img class="is-round" src="../../public/images/landingspage/projects/firstgui.png"></div>
+          <img class="is-round" src="../../public/images/landingspage/projects/firstgui.png">
+        </div>
+
       </div>
 
       <div class="columns index">
         <div class="is-text">
-          <p>We offer an user friendly interface that will allow you to browse any amount of documents without issue.</p></div>
+          <p>We offer an user friendly interface that will allow you to browse any amount of documents without
+            issue.</p></div>
         <div class="is-image">
           <img class="is-round" src="../../public/images/landingspage/projects/secondgui.png"></div>
       </div>
 
       <div class="columns last">
         <div class="is-text">
-          <p>The insights provided by our database will show you the tips and tricks needed to land any funding deal from investors and receive appriate funds.</p></div>
+          <p>The insights provided by our database will show you the tips and tricks needed to land any funding deal
+            from investors and receive appriate funds.</p></div>
         <div class="is-image">
           <img class="is-round" src="../../public/images/landingspage/projects/thirdgui.png"></div>
       </div>
@@ -71,10 +75,26 @@ export default {
 //  background-color: red;
 //}
 
-.columns{
+.columns {
   padding: 24px;
- .is-text{
-   width:100%
- }
+
+  .is-text {
+    width: 100%
+  }
+}
+
+//stay here for colour the top and bottom
+.topimg {
+  img {
+    width: 100%;
+position: relative;
+    top: -14px;
+  }
+}
+
+.botimg {
+  img {
+    width: 100%;
+  }
 }
 </style>

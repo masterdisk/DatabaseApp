@@ -14,7 +14,7 @@
 
                 <div class="button-block ">
 
-                  <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Register for 50 DKK
+                  <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Register for XX DKK
                   </button>
 
 <!--                  <a v-if="$auth.isAuthenticated" class="button is-dark" @click="console">Welcome, {{$auth.user.name}}!</a>  activate this for custom name -->
