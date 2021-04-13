@@ -33,7 +33,8 @@
     </section>
     <CallToAction/>
     <Projects/>
-    <EventList/>
+    <Footer/>
+<!--    <EventList/>-->
   </div>
 </template>
 <script>
@@ -41,6 +42,7 @@ import CallToAction from "@/components/CallToAction";
 import EventList from "@/components/EventsList";
 import PayButton from "@/components/partials/PayButton";
 import Projects from "@/components/Projects";
+import Footer from "@/components/partials/Footer";
 
 export default {
   name: 'home',
@@ -48,7 +50,8 @@ export default {
     CallToAction,
     EventList,
     PayButton,
-    Projects
+    Projects,
+    Footer
   },
   methods: {
     // Log the user in
