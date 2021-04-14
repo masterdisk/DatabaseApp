@@ -163,7 +163,8 @@ export default {
 }
 
 .columns {
-  padding: 48px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 
   .is-text {
     width: 100%;
@@ -175,14 +176,16 @@ export default {
   .is-image {
     position: relative;
     z-index: 20;
-    box-shadow: 2rem 25px rgba(37, 75, 142, 0.8);
+    box-shadow: 2rem 25px rgb(37, 75, 143);
     margin-right: 36px;
-    img{
-    float: left;
-    width:  788px;
-    height: 468px;
-    object-fit: fill ;
-  }}
+
+    img {
+      float: left;
+      width: 788px;
+      height: 468px;
+      object-fit: fill;
+    }
+  }
 }
 
 
@@ -196,6 +199,8 @@ export default {
 
 .botimg {
   padding-top: 48px;
+  margin-bottom: -24px;
+
   img {
     width: 100%;
   }

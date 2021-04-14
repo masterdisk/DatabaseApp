@@ -44,3 +44,6 @@ new Vue({
     router,
     render: h => h(App)
 }).$mount('#app')
+
+// Bulma
+require('@/variables.scss');
