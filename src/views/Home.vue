@@ -37,6 +37,7 @@
 <!--    <EventList/>-->
   </div>
 </template>
+
 <script>
 import CallToAction from "@/components/CallToAction";
 import EventList from "@/components/EventsList";

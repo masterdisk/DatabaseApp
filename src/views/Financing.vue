@@ -15,8 +15,26 @@
         eligendi dolorum reprehenderit ea amet, aliquid dolorem beatae, iste aliquam ullam. Sequi ab eligendi
         consectetur neque laudantium, libero asperiores.</p>
     </div>
+    <EventList/>
   </div>
+
 </template>
+
+<script>
+import EventList from "@/components/EventsList";
+
+export default {
+  name: 'home',
+  components: {
+
+    EventList
+
+  }
+
+}
+
+</script>
+
 <style lang="scss" scoped>
 .org-description {
   margin-top: 50px;
