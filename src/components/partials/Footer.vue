@@ -6,7 +6,7 @@
       <div class="columns">
 
         <div class="column c1">
-          <img src="../../../public/images/landingspage/footer/logos-rebranding-01.jpg">
+          <img src="../../../public/images/landingspage/footer/logofooter.png">
         </div>
 
 

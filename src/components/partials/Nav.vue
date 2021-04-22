@@ -84,9 +84,9 @@ export default {
     padding-right: 0px !important;
 
     img {
-      width: 108px;
-      height: 108px;
-      max-height: none;
+      width: auto;
+      height: auto;
+      max-height: 135px;
     }
   }
 
