@@ -40,6 +40,12 @@ export default new Router({
             name: 'eventSingle',
             component: () => import('../views/EventSingle.vue'),
             beforeEnter: authGuard
+        },
+        {
+            path: '/success',
+            name: 'paymentSuccess',
+            component: () => import('../views/SuccessPay.vue'),
+            beforeEnter: authGuard
         }
     ]
 })

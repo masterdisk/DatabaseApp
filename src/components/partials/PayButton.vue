@@ -1,5 +1,5 @@
 <template>
-  <div  v-if="$auth.isAuthenticated" class="paybutton">
+  <div v-if="$auth.isAuthenticated" class="paybutton">
     <stripe-checkout
         ref="checkoutRef"
         :cancel-url="cancelURL"
@@ -30,8 +30,8 @@ export default {
           quantity: 1,
         },
       ],
-      successURL: 'https://localhost:8080/contact', //modify this with successful page
-      cancelURL: 'https://localhost:8080', //modify this with canceled page
+      successURL: 'http://localhost:8080/success', //modify this with successful page
+      cancelURL: 'http://localhost:8080', //modify this with canceled page
     };
   },
   methods: {

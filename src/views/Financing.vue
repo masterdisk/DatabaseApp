@@ -8,11 +8,21 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <p v-if="isPaid=== null" class="org-description is-size-4"></p>
-      <p v-if="isPaid" class="org-description is-size-4">PREMIUM IS ACTIVATED</p>
-      <p v-if="!isPaid" class="org-description is-size-4">PREMIUM IS NOT ACTIVATED</p>
+
+    <div v-if="isPaid=== null"  class="container">
+      <p class="org-description is-size-4"></p>
     </div>
+
+    <div v-if="isPaid" class="container">
+      <p class="org-description is-size-4">PREMIUM IS ACTIVATED</p>
+    </div>
+
+    <div v-if="!isPaid" class="container">
+      <p  class="org-description is-size-4">PREMIUM IS NOT ACTIVATED</p>
+      <PayButton/>
+    </div>
+
+
   </div>
 
 
@@ -21,12 +31,13 @@
 <script>
 import EventList from "@/components/EventsList";
 import EventService from '@/services/EventService.js';
-
+import PayButton from "@/components/partials/PayButton";
 
 export default {
   name: 'home',
   components: {
-    EventList
+    EventList,
+    PayButton
   },
   data() {
     return {isPaid: null}
@@ -36,9 +47,9 @@ export default {
   },
   methods: {
     verifySubscription: async function (email) {
-      console.log(email);
-      this.isPaid = await EventService.getSubscriptionStatus(email);
-      console.log(this.isPaid);
+      // Get the access token from the auth wrapper
+      const accessToken = await this.$auth.getTokenSilently()
+      this.isPaid = await EventService.getSubscriptionStatus(email,accessToken);
     }
   }
 
