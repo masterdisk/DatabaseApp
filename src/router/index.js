@@ -27,7 +27,8 @@ export default new Router({
         {
             path: '/financing',
             name: 'financing',
-            component: () => import('../views/Financing.vue')
+            component: () => import('../views/Financing.vue'),
+            beforeEnter: authGuard
         },
         {
             path: '/entrepreneurship',
