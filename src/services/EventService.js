@@ -15,7 +15,17 @@ export default {
     },
     async getSubscriptionStatus(email, accessToken) {
 
-        let res = await axios.get("http://localhost:8000/subscription/" + email, {
+        let res = await axios.get("http://localhost:8000/subscription/verify/" + email, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        });
+        return res.data;
+    },
+
+    async changeSubscriptionStatus(email, accessToken) {
+
+        let res = await axios.get("http://localhost:8000/subscription/change/" + email, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             }
