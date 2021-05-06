@@ -72,10 +72,10 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 857px;
+  height: 800px;
 }
 .hero-body {
-  z-index: 10;
+  z-index: 15;
 }
 //here for transparency effect header and responsiveness
 .header {
@@ -105,12 +105,12 @@ export default {
 .background-header {
   position: absolute;
   background-color: #254b8e;
-  clip-path: polygon(0 0, 70% 0%, 40% 91.5%, 0% 91.5%);
+  clip-path: polygon(0 0, 70% 0%, 40% 100%, 0% 100%);
   width: 100%;
   height: 100%;
-  position: absolute;
   opacity: 0.82;
-  z-index: 0;
+  z-index: 10;
+  top: 0px;
 }
 .is-xl {
   font-size: 1.7rem;

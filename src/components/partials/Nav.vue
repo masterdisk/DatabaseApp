@@ -68,9 +68,9 @@ export default {
 .background-nav {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
-  position: absolute;
   left: 0px;
   right: 0px;
+  position: relative;
   z-index: 20;
 
   nav {
