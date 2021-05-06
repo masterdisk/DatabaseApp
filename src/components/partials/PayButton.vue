@@ -51,6 +51,7 @@ export default {
 
   .button {
     font-family: "Lato", Helvetica, Arial;
+    border-radius: 20px;
     font-weight: 400;
     font-style: italic;
     font-size: 45px;

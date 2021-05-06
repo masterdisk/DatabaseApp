@@ -14,7 +14,7 @@
 
                 <div class="button-block ">
 
-                  <button v-if="!$auth.isAuthenticated" class="button  is-dark" @click="login">Register for XX DKK
+                  <button v-if="!$auth.isAuthenticated" class="button is-dark" @click="login">Register for XX DKK
                   </button>
 
                   <PayButton/>
@@ -72,14 +72,14 @@ export default {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 800px;
+  height: 700px;
 }
 .hero-body {
   z-index: 15;
 }
 //here for transparency effect header and responsiveness
 .header {
-  margin-top: 6rem;
+
   h2 {
     font-family: "Lato-Regular", Helvetica, Arial;
     font-weight: 400;
@@ -93,6 +93,7 @@ export default {
   bottom: -150px;
   .button.is-dark {
     background-color: #283655;
+    border-radius: 20px;
     &:first-child {
       font-family: "Lato", Helvetica, Arial;
       font-weight: 400;
@@ -105,7 +106,7 @@ export default {
 .background-header {
   position: absolute;
   background-color: #254b8e;
-  clip-path: polygon(0 0, 70% 0%, 40% 100%, 0% 100%);
+  clip-path: polygon(0 0, 70% 0%, 40% 90%, 0% 90%);
   width: 100%;
   height: 100%;
   opacity: 0.82;
