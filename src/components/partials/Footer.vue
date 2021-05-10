@@ -98,20 +98,15 @@ export default {
       .menu-list {
         li {
           color: white;
-font-size: 20px;
-          font-family: 'Lato', sans-serif;
-          font-weight: lighter;
-          font-style: italic;
+          font-size: 20px;
+          font-family: 'Lato', ital;
         }
       }
 
       .menu-label {
         text-transform: none;
-
-        font-family: 'Lato', sans-serif;
+        font-family: 'Lato', ital;
         letter-spacing: 0px;
-        font-weight: bold;
-        font-style: italic;
       }
     }
   }
@@ -124,10 +119,6 @@ font-size: 20px;
     max-height: 361px;
 
   }
-
-  .c2 {
-
-  }
 }
 
 .footer {
@@ -137,18 +128,17 @@ font-size: 20px;
 .container {
   background-color: #254B8F;
 
-.contact{
-  text-align: center;
-  color:#E8E8E8;
-  font-size: 20px;
-&.address{
-  font-family: 'Lato', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-}
-}
+  .contact {
+    text-align: center;
+    color: #E8E8E8;
+    font-size: 20px;
 
-
+    &.address {
+      font-family: 'Lato', ital;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
 }
 
 </style>
