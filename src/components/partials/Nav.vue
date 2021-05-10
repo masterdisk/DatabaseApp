@@ -86,15 +86,15 @@ export default {
     img {
       width: auto;
       height: auto;
-      max-height: 135px;
+      max-height: 80px;
     }
   }
 
   .navbar-item {
     font-family: "Lato-Bold", "Lato-Bold", Helvetica, Arial;
-    font-size: 32.5px;
+    font-size: 28px;
     font-weight: bold;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 1.5px black;
     padding-top: 0px;
     padding-bottom: 0px;
     padding-left: 24px;
@@ -118,9 +118,9 @@ export default {
         background-color: transparent;
         border-color: transparent;
         font-family: "Lato-Bold", "Lato-Bold", Helvetica, Arial;
-        font-size: 32.5px;
+        font-size: 28px;
         font-weight: bold;
-        -webkit-text-stroke: 2px black;
+        -webkit-text-stroke: 1.5px black;
         color: white;
         &:hover {
           color: red;

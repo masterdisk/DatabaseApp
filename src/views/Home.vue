@@ -29,6 +29,7 @@
 
       </div>
       <div class="background-header"></div>
+      <div class="background-header-low"></div>
     </section>
     <CallToAction/>
     <Projects/>
@@ -81,11 +82,13 @@ export default {
 .header {
 
   h2 {
-    font-family: "Lato-Regular", Helvetica, Arial;
-    font-weight: 400;
-    font-size: 72.3px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 70px;
     width: 885px;
     color: white;
+    line-height:85px;
   }
 }
 .button-block {
@@ -95,11 +98,14 @@ export default {
     background-color: #283655;
     border-radius: 20px;
     &:first-child {
-      font-family: "Lato", Helvetica, Arial;
-      font-weight: 400;
+      font-family: 'Lato', ital;
+      letter-spacing: 1px;
+      border-radius: 20px;
+      font-weight: 900;
       font-style: italic;
-      font-size: 45px;
+      font-size: 40px;
       margin-top: 24px;
+      background-color: #283655;
     }
   }
 }
@@ -109,10 +115,21 @@ export default {
   clip-path: polygon(0 0, 70% 0%, 40% 90%, 0% 90%);
   width: 100%;
   height: 100%;
-  opacity: 0.82;
+  opacity: 0.90;
   z-index: 10;
   top: 0px;
 }
+.background-header-low {
+  position: absolute;
+  background-color: black;
+  clip-path: polygon(0 85%, 100% 77%, 100% 100%, 0% 100%);
+  width: 100%;
+  height: 100%;
+  opacity: 0.25;
+  z-index: 20;
+  bottom:155px;
+}
+
 .is-xl {
   font-size: 1.7rem;
 }

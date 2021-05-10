@@ -50,11 +50,12 @@ export default {
   text-align: left;
 
   .button {
-    font-family: "Lato", Helvetica, Arial;
+    font-family: 'Lato', ital;
+    letter-spacing: 1px;
     border-radius: 20px;
-    font-weight: 400;
+    font-weight: 900;
     font-style: italic;
-    font-size: 45px;
+    font-size: 40px;
     margin-top: 24px;
     background-color: #283655;
   }
