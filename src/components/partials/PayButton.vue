@@ -30,8 +30,8 @@ export default {
           quantity: 1,
         },
       ],
-      successURL: 'http://localhost:8080/success', //modify this with successful page
-      cancelURL: 'http://localhost:8080', //modify this with canceled page
+      successURL: "https://code-name.net/success", //modify this with successful page
+      cancelURL: "https://code-name.net/", //modify this with canceled page
     };
   },
   methods: {

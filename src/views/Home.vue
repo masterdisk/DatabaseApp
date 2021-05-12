@@ -26,15 +26,16 @@
           </div>
         </div>
 
-
       </div>
+
       <div class="background-header"></div>
-      <!--      <div class="background-header-low"></div>-->
+
     </section>
+
     <CallToAction/>
     <Projects/>
     <Footer/>
-    <!--    <EventList/>-->
+
   </div>
 </template>
 

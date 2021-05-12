@@ -15,23 +15,23 @@ export default new Router({
             component: Home
         },
         {
-            path: '/contact',
+            path: '/contact/',
             name: 'contact',
             component: () => import('../views/Contact.vue')
         },
         {
-            path: '/funding',
+            path: '/funding/',
             name: 'funding',
             component: () => import('../views/Funding.vue')
         },
         {
-            path: '/financing',
+            path: '/financing/',
             name: 'financing',
             component: () => import('../views/Financing.vue'),
             beforeEnter: authGuard
         },
         {
-            path: '/entrepreneurship',
+            path: '/entrepreneurship/',
             name: 'entrepreneurship',
             component: () => import('../views/Entrepreneurship.vue')
         },
@@ -42,7 +42,7 @@ export default new Router({
             beforeEnter: authGuard
         },
         {
-            path: '/success',
+            path: '/success/',
             name: 'paymentSuccess',
             component: () => import('../views/SuccessPay.vue'),
             beforeEnter: authGuard

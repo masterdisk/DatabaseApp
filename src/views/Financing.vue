@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <div v-if="isPaid=== null"  class="container">
+    <div v-if="isPaid=== null" class="container">
       <p class="org-description is-size-4"></p>
     </div>
 
@@ -19,7 +19,7 @@
     </div>
 
     <div v-if="!isPaid" class="container">
-      <p  class="org-description is-size-4">PREMIUM IS NOT ACTIVATED</p>
+      <p class="org-description is-size-4">PREMIUM IS NOT ACTIVATED</p>
       <PayButton/>
     </div>
 
@@ -52,12 +52,9 @@ export default {
     verifySubscription: async function (email) {
       // // Get the access token from the auth wrapper
       const accessToken = await this.$auth.getTokenSilently()
+      let id = await EventService.getId(email, accessToken);
+      this.isPaid = await EventService.getSubscriptionStatus(id, accessToken);
 
-
-      let id = await EventService.getId(email,accessToken);
-      console.log(id);
-      this.isPaid = await EventService.getSubscriptionStatus(id,accessToken);
-      console.log(this.isPaid);
     }
   }
 
