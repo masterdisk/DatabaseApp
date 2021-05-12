@@ -5,6 +5,7 @@ export default {
         let res = await axios.get("http://localhost:8000/events");
         return res.data;
     },
+
     async getEventSingle(eventId, accessToken) {
         let res = await axios.get("http://localhost:8000/events/" + eventId, {
             headers: {
@@ -13,9 +14,10 @@ export default {
         });
         return res.data;
     },
-    async getSubscriptionStatus(email, accessToken) {
 
-        let res = await axios.get("http://localhost:8000/subscription/verify/" + email, {
+    async getSubscriptionStatus(id, accessToken) {
+
+        let res = await axios.get("http://localhost:8000/subscription/verify/" + id, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             }
@@ -23,13 +25,24 @@ export default {
         return res.data;
     },
 
-    async changeSubscriptionStatus(email, accessToken) {
+    async getId(email, accessToken) {
 
-        let res = await axios.get("http://localhost:8000/subscription/change/" + email, {
+        let res = await axios.get("http://localhost:8000/users/id/" + email, {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        });
+        return res.data;
+    },
+
+    async changeSubscriptionStatus(id, accessToken) {
+
+        let res = await axios.get("http://localhost:8000/subscription/change/" + id, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             }
         });
         return res.data;
     }
+
 }

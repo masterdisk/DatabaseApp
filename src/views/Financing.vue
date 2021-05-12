@@ -15,6 +15,7 @@
 
     <div v-if="isPaid" class="container">
       <p class="org-description is-size-4">PREMIUM IS ACTIVATED</p>
+      <Table/>
     </div>
 
     <div v-if="!isPaid" class="container">
@@ -32,12 +33,14 @@
 import EventList from "@/components/EventsList";
 import EventService from '@/services/EventService.js';
 import PayButton from "@/components/partials/PayButton";
+import Table from "@/components/Table";
 
 export default {
   name: 'home',
   components: {
     EventList,
-    PayButton
+    PayButton,
+    Table
   },
   data() {
     return {isPaid: null}
@@ -47,9 +50,14 @@ export default {
   },
   methods: {
     verifySubscription: async function (email) {
-      // Get the access token from the auth wrapper
+      // // Get the access token from the auth wrapper
       const accessToken = await this.$auth.getTokenSilently()
-      this.isPaid = await EventService.getSubscriptionStatus(email,accessToken);
+
+
+      let id = await EventService.getId(email,accessToken);
+      console.log(id);
+      this.isPaid = await EventService.getSubscriptionStatus(id,accessToken);
+      console.log(this.isPaid);
     }
   }
 

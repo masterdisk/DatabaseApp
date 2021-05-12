@@ -40,9 +40,12 @@ export default {
   },
   methods: {
     changeSubscription: async function (email) {
+
       // Get the access token from the auth wrapper
-      const accessToken = await this.$auth.getTokenSilently();
-      this.isPaid = await EventService.changeSubscriptionStatus(email,accessToken);
+      const accessToken = await this.$auth.getTokenSilently()
+      let id = await EventService.getId(email,accessToken);
+      this.isPaid = await EventService.changeSubscriptionStatus(id,accessToken);
+
     }
   }
 

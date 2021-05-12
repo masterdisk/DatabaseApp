@@ -29,12 +29,12 @@
 
       </div>
       <div class="background-header"></div>
-      <div class="background-header-low"></div>
+      <!--      <div class="background-header-low"></div>-->
     </section>
     <CallToAction/>
     <Projects/>
     <Footer/>
-<!--    <EventList/>-->
+    <!--    <EventList/>-->
   </div>
 </template>
 
@@ -75,9 +75,11 @@ export default {
   background-repeat: no-repeat;
   height: 700px;
 }
+
 .hero-body {
   z-index: 15;
 }
+
 //here for transparency effect header and responsiveness
 .header {
 
@@ -88,15 +90,18 @@ export default {
     font-size: 70px;
     width: 885px;
     color: white;
-    line-height:85px;
+    line-height: 85px;
   }
 }
+
 .button-block {
   position: absolute;
   bottom: -150px;
+
   .button.is-dark {
     background-color: #283655;
     border-radius: 20px;
+
     &:first-child {
       font-family: 'Lato', ital;
       letter-spacing: 1px;
@@ -109,6 +114,7 @@ export default {
     }
   }
 }
+
 .background-header {
   position: absolute;
   background-color: #254b8e;
@@ -119,20 +125,22 @@ export default {
   z-index: 10;
   top: 0px;
 }
-.background-header-low {
-  position: absolute;
-  background-color: black;
-  clip-path: polygon(0 85%, 100% 77%, 100% 100%, 0% 100%);
-  width: 100%;
-  height: 100%;
-  opacity: 0.25;
-  z-index: 20;
-  bottom:155px;
-}
+
+//.background-header-low {
+//  position: absolute;
+//  background-color: black;
+//  clip-path: polygon(0 85%, 100% 77%, 100% 100%, 0% 100%);
+//  width: 100%;
+//  height: 100%;
+//  opacity: 0.25;
+//  z-index: 20;
+//  bottom: 155px;
+//}
 
 .is-xl {
   font-size: 1.7rem;
 }
+
 .third {
   width: 33.33333%;
 }
