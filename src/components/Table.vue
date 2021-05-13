@@ -1,25 +1,24 @@
 <template>
-  <div style="width: 600px">
+  <div>
     <vue-table-dynamic
-        :params="params"
         ref="table"
+        :params="params"
     >
     </vue-table-dynamic>
   </div>
 </template>
 
 <script>
-import VueTableDynamic from 'vue-table-dynamic'
+import VueTableDynamic from 'vue-table-dynamic';
+import EventService from '@/services/EventService.js';
+
 export default {
-  name: 'Demo',
+  name: 'TableFamilies',
   data() {
     return {
       params: {
         data: [
-          ['Index', 'Data1', 'Data2', 'Data3'],
-          [1, 'b3ba90', '7c95f7', '9a3853'],
-          [2, 'ec0b78', 'ba045d', 'ecf03c'],
-          [3, '63788d', 'a8c325', 'aab418']
+          ['OrganizationName', 'OrganizationURL', 'Location', 'Description', "Website", "Email", "Phone", "Status", "Industry", "Stages", "CompanyInvested"],
         ],
         header: 'row',
         enableSearch: true
@@ -27,8 +26,25 @@ export default {
     }
   },
   methods: {
+    getDatabase: async function () {
+      // // Get the access token from the auth wrapper
+      const accessToken = await this.$auth.getTokenSilently()
+      let data = await EventService.getData(accessToken);
+
+      let i = 1;
+      data.forEach(element => {
+        const row = Object.values(element);
+        row.shift();
+        this.params.data.splice(i, 0, row);
+        i++;
+      });
+    }
   },
-  components: { VueTableDynamic }
+  components: {VueTableDynamic},
+  created() {
+    this.getDatabase();
+  }
+
 }
 </script>
 

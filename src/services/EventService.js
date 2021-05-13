@@ -43,6 +43,16 @@ export default {
             }
         });
         return res.data;
+    },
+
+    async getData(accessToken) {
+
+        let res = await axios.get("https://databaseappdigitalmarker.herokuapp.com/data/", {
+            headers: {
+                Authorization: `Bearer ${accessToken}`
+            }
+        });
+        return res.data;
     }
 
 }
