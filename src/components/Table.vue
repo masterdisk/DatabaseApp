@@ -21,7 +21,16 @@ export default {
           ['OrganizationName', 'OrganizationURL', 'Location', 'Description', "Website", "Email", "Phone", "Status", "Industry", "Stages", "CompanyInvested"],
         ],
         header: 'row',
-        enableSearch: true
+        border: true,
+        stripe: true,
+        height: 500,
+        enableSearch: true,
+        pagination: true,
+        pageSize: 16,
+        pageSizes: [5, 10, 20, 50],
+        sort: [0],
+        showCheck: true
+
       }
     }
   },
