@@ -112,7 +112,6 @@ export default {
       const test = new jsPDF('landscape', 'px', [2600, 600]);
 
       test.table(5, 1, finalData, headers, {autoSize: true, fontSize: 10, padding: 5, margins: 10})
-      console.log("data:" + data);
       test.save("ssss.pdf");
     },
 
